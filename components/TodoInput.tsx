@@ -21,7 +21,7 @@ export default function TodoInput({ onAdd }: Props) {
   };
 
   return (
-    <div className="flex gap-3">
+    <div className="flex flex-col sm:flex-row gap-3">
       <input
         type="text"
         value={value}
@@ -34,7 +34,7 @@ export default function TodoInput({ onAdd }: Props) {
       <button
         onClick={handleSubmit}
         disabled={!value.trim()}
-        className="px-5 py-3 bg-indigo-500 text-white rounded-xl text-sm font-medium hover:bg-indigo-600 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-150 whitespace-nowrap"
+        className="w-full sm:w-auto px-5 py-3 bg-indigo-500 text-white rounded-xl text-sm font-medium hover:bg-indigo-600 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-150 whitespace-nowrap"
       >
         追加
       </button>

@@ -52,7 +52,7 @@ export default function TodoItem({ todo, onToggle, onDelete }: Props) {
       {/* 削除ボタン */}
       <button
         onClick={() => onDelete(todo.id)}
-        className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-gray-300 hover:text-red-400 hover:bg-red-50 opacity-0 group-hover:opacity-100 transition-all duration-150"
+        className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-gray-400 sm:text-gray-300 hover:text-red-400 hover:bg-red-50 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-150"
         aria-label="削除"
       >
         <svg

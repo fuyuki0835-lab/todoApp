@@ -13,7 +13,7 @@ type Props = {
 const filters: { value: Filter; label: string }[] = [
   { value: "all", label: "すべて" },
   { value: "active", label: "未完了" },
-  { value: "completed", label: "完了済み" },
+  { value: "completed", label: "完了" },
 ];
 
 export default function TodoFilter({
@@ -35,7 +35,7 @@ export default function TodoFilter({
         <button
           key={f.value}
           onClick={() => onFilterChange(f.value)}
-          className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium transition-all duration-150 ${
+          className={`flex-1 flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-medium transition-all duration-150 ${
             filter === f.value
               ? "bg-white text-indigo-600 shadow-sm"
               : "text-gray-500 hover:text-gray-700"
